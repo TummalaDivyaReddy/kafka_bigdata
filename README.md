@@ -5,6 +5,13 @@
 [producer](kafka_producer.py)
 
 
+## Simple user registration page using Nodejs, MongoDB
+
+Registration page is created by [registration](register.html)
+[consumer](consumer.js)
+[producer](producer.js)
+
+
 Apache Kafka is a distributed platform designed for handling real-time data streams, enabling efficient data processing and storage with fault-tolerance to minimize downtime. It is highly performant, capable of processing millions of messages per second with low latency, making it suitable for demanding applications. Kafka's scalability allows the seamless addition of brokers to manage increased workloads without compromising performance, while its durability ensures that data is written to disk and replicated across brokers to prevent loss. Additionally, Kafka's fault tolerance allows it to automatically recover from hardware failures, maintaining system reliability. For instance, in a stock trading platform where real-time transaction data is critical, Kafka ensures that every transaction is processed swiftly and reliably, safeguarding the integrity of the trading process.
 
 In Apache Kafka, a topic acts as a folder holding messages, which are subdivided into partitions to facilitate parallel processing and distributed data storage across brokers. Each partition has multiple replicas stored on different brokers to ensure redundancy and prevent data loss. Producers are applications that send messages to Kafka, such as weather sensors transmitting temperature readings, while consumers are applications that retrieve and process this data, like an analytics dashboard displaying the readings. Kafka's brokers are servers responsible for storing and delivering messages, with partitions distributed among them for balanced workloads. Additionally, Zookeeper coordinates the Kafka cluster by managing brokers and topics. For example, in a ride-sharing app, producers like driver and rider devices send location updates to Kafka topics, while consumers, such as routing services, process this data to match rides efficiently.
