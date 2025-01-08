@@ -1,5 +1,10 @@
 # kafka_bigdata
 
+### Messaging between producer and consumer using python:
+[consumer](kafka_Consumer.py)
+[producer](kafka_producer.py)
+
+
 Apache Kafka is a distributed platform designed for handling real-time data streams, enabling efficient data processing and storage with fault-tolerance to minimize downtime. It is highly performant, capable of processing millions of messages per second with low latency, making it suitable for demanding applications. Kafka's scalability allows the seamless addition of brokers to manage increased workloads without compromising performance, while its durability ensures that data is written to disk and replicated across brokers to prevent loss. Additionally, Kafka's fault tolerance allows it to automatically recover from hardware failures, maintaining system reliability. For instance, in a stock trading platform where real-time transaction data is critical, Kafka ensures that every transaction is processed swiftly and reliably, safeguarding the integrity of the trading process.
 
 In Apache Kafka, a topic acts as a folder holding messages, which are subdivided into partitions to facilitate parallel processing and distributed data storage across brokers. Each partition has multiple replicas stored on different brokers to ensure redundancy and prevent data loss. Producers are applications that send messages to Kafka, such as weather sensors transmitting temperature readings, while consumers are applications that retrieve and process this data, like an analytics dashboard displaying the readings. Kafka's brokers are servers responsible for storing and delivering messages, with partitions distributed among them for balanced workloads. Additionally, Zookeeper coordinates the Kafka cluster by managing brokers and topics. For example, in a ride-sharing app, producers like driver and rider devices send location updates to Kafka topics, while consumers, such as routing services, process this data to match rides efficiently.
@@ -11,8 +16,6 @@ As the app scales to cover more games, the single-server queue struggles to keep
 Each partition is stored on brokers (servers), and Kafka assigns a unique offset (number) to each message, which helps maintain message order and allows consumers to track their position within the data stream. Consumers in Kafka are lightweight, meaning many can run in parallel without performance issues. They also belong to consumer groups, so if one consumer in a group reads a record, others do not, ensuring workload balance.
 Kafka can be configured to store records for a set time (e.g., 24 hours), allowing it to automatically delete old records. It also uses replication to ensure fault tolerance: if a broker fails, a backup partition on another broker can take over, allowing the system to continue running smoothly.
 Each tool in the data streaming and messaging ecosystem addresses specific needs, with Apache Kafka standing out for its scalability, fault tolerance, and ability to handle high-throughput real-time data streams. In comparison, Amazon Kinesis, a fully managed service, is ideal for massive-scale event analytics but comes with higher costs. RabbitMQ suits smaller-scale projects requiring diverse messaging patterns, while ActiveMQ, a mature enterprise broker, lacks Kafka's performance for high-throughput use cases. IBM MQ excels in guaranteed message delivery and security, making it a preferred choice for critical industries like banking, but it is less focused on real-time streaming. Meanwhile, Amazon SQS offers a simple, cost-effective solution for lightweight tasks, though it does not support real-time data streaming like Kafka.
-
-## Messaging between producer and consumer using kafka.
 
 
 
